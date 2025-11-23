@@ -1,0 +1,161 @@
+header h1 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+.github-fork-ribbon:before {
+  background-color: black;
+}
+
+.chess-board-container {
+  position: relative;
+  left: -1em;
+  top: 0.5em;
+}
+
+.chess-board {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.chess-board th {
+  padding: .5em;
+}
+
+.chess-board th:first-child,
+.chess-board td:last-child {
+  border-right: 1px solid #000;
+}
+
+.chess-board tr:last-child td {
+  border-bottom: 1px solid;
+}
+
+.chess-board th:empty {
+  border: none;
+}
+
+.chess-board td {
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  font-size: 48px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.chess-board .light {
+  background: #f0d9b5;
+}
+
+.chess-board .dark {
+  background: #b58863;
+}
+
+.chess-board .current {
+  background: rgba(252, 211, 77, 0.9);
+}
+
+.chess-board .legal-move {
+  color: forestgreen;
+}
+
+.chess-board .king-attacked {
+  background: darkred;
+}
+
+.chess-board .last-move {
+  background:rgba(252, 211, 77, 0.8);
+}
+
+.collapse-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(100%);
+}
+
+.collapse.show {
+  transform: translateY(0);
+}
+
+
+body {
+  background-color: #302e2b;
+  color: #e5e7eb;
+}
+
+main,
+.row chess-board-container {   
+  max-width: 600px;
+  margin: 0 auto;  
+  background-color: #262522;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+
+.btn-primary {
+  background-color: #22c55e !important;
+  border-color: #16a34a !important;
+  color: #022c22 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #16a34a !important;
+  border-color: #15803d !important;
+}
+
+.btn-outline-secondary {
+  border-color: #22c55e !important;
+  color: #22c55e !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: #22c55e !important;
+  color: #022c22 !important;
+}
+
+.piece-white,
+.piece-white::before {
+  color: #f9fafb !important;
+  font-size: 2.2rem !important;
+  text-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+
+.piece-black,
+.piece-black::before {
+  color: #111827 !important;
+  font-size: 2.2rem !important;
+  text-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+
+.piece {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.piece-w-pawn  { background-image: url("/images/chess/pawn-w.svg"); }
+.piece-w-knight{ background-image: url("/images/chess/knight-w.svg"); }
+.piece-w-bishop{ background-image: url("/images/chess/bishop-w.svg"); }
+.piece-w-rook  { background-image: url("/images/chess/rook-w.svg"); }
+.piece-w-queen { background-image: url("/images/chess/queen-w.svg"); }
+.piece-w-king  { background-image: url("/images/chess/king-w.svg"); }
+
+.piece-b-pawn  { background-image: url("/images/chess/pawn-b.svg"); }
+.piece-b-knight{ background-image: url("/images/chess/knight-b.svg"); }
+.piece-b-bishop{ background-image: url("/images/chess/bishop-b.svg"); }
+.piece-b-rook  { background-image: url("/images/chess/rook-b.svg"); }
+.piece-b-queen { background-image: url("/images/chess/queen-b.svg"); }
+.piece-b-king  { background-image: url("/images/chess/king-b.svg"); }
